@@ -85,25 +85,25 @@ var SliderStatus = true;
 		            	nextImg = (errors[i] === nextImg) ? brokenImage : nextImg;
 		            }
 		        }
-		        
+
 		        setTimeout(function(){
 		        	loaderSVG.hide();
 		        	SliderInterval();
 		        }, 2000);
 
 		        activeSlide.css("background-image", "url('" + activeImg + "')");
-			
+
 				PrevImg.attr("src", prevImg);
-				
+
 				NextImg.attr("src", nextImg);
 		    }
 		});
 
 		activeTitle.text(dataHeader[activeIndex].title);
 
-		PrevAuthor.text("by " + dataHeader[prevIndex].author);
+		PrevAuthor.text(dataHeader[prevIndex].author);
 		PrevTitle.text(dataHeader[prevIndex].title);
-		NextAuthor.text("by " + dataHeader[nextIndex].author);
+		NextAuthor.text(dataHeader[nextIndex].author);
 		NextTitle.text(dataHeader[nextIndex].title);
 	}
 
@@ -131,7 +131,7 @@ var SliderStatus = true;
 
 		setTimeout(function(){
 			startImageHeader();
-		}, 800);	
+		}, 800);
 	}
 
 	startImageHeader();
@@ -143,7 +143,7 @@ var SliderStatus = true;
 (function($){
 	$(document).on("ready", function(){
 		"use strict"
-		
+
 
 		//Header fit screen
 
@@ -264,7 +264,7 @@ var SliderStatus = true;
 
 			    	portList.appendTo(containerPortfolio);
 			    });
-			    
+
 			    $(".container-portfolio").mixItUp({
 			    	selectors : {
 			    		target : ".portfolio-view"
